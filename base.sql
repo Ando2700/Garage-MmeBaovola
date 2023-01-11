@@ -38,4 +38,5 @@ insert into type_niveau(type_niveau) values
 
 insert into candidat(nom, prenom, date_naissance, id_niveau,specialite,id_sexe ) values
 ('rakoto', 'jaona', '2000-10-22', 1, 'Soudure', 2 ),
-('rabe', 'jao', '2000-09-12', 3, 'Vidange', 1 );
+('rabe', 'jao', '2000-09-12', 3, 'Vidange', 1 ),
+('rasoa', 'hendry', '2000-03-15', 2, 'Soudure', 2);
