@@ -46,9 +46,9 @@ insert into specialite(type_specialite) values
 ('Soudure'),
 ('Vidange'),
 ('Mecanicien'),
-('Marketing'),
+('Mpanadio'),
 ('Electronique');
 
 insert into candidat(nom, prenom, date_naissance, id_niveau,id_specialite,id_sexe ) values
-('rakoto', 'jaona', '2000-10-22', 1, 5, 2 ),
-('rabe', 'jao', '2000-09-12', 3, 1, 1 );
+('rakoto', 'jaona', '2000-10-22', 1, 3, 2 ),
+('rabe', 'jao', '2000-09-12', 3, 4, 1 );
