@@ -45,7 +45,7 @@ insert into type_niveau(type_niveau) values
 insert into specialite(type_specialite) values
 ('Soudure'),
 ('Vidange'),
-('Moteur'),
+('Mecanicien'),
 ('Marketing'),
 ('Electronique');
 
