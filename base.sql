@@ -22,7 +22,7 @@ create table salaire(
 create table specialite (
     id_specialite serial primary key,
     type_specialite varchar(20)
-    salaire integer check salaire > 0,
+    id_salaire integer,
     foreign key (id_salaire) references salaire(id_salaire)
 );
 
@@ -50,14 +50,19 @@ insert into type_niveau(type_niveau) values
 ('Master 2'),
 ('Doctorat');
 
-insert into specialite(type_specialite, salaire) values
-('Soudure', 200000),
-('Vidange', 500000),
-('Mecanicien', 600000),
-('Mpanadio', 200000),
-('Electricien', 600000 );
+insert into salaire(prix) values
+(100000),
+(200000),
+(600000),
+(200000),
+(600000);
 
-insert into salaire()
+insert into specialite(type_specialite, id_salaire) values
+('Soudure', 1),
+('Vidange', 2),
+('Mecanicien', 3),
+('Mpanadio', 4),
+('Electricien', 5);
 
 insert into candidat(nom, prenom, date_naissance, id_niveau,id_specialite,id_sexe ) values
 ('rakoto', 'jaona', '2000-10-22', 1, 3, 2 ),
