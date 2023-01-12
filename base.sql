@@ -13,15 +13,18 @@ create table type_niveau(
     type_niveau varchar(20)
 );
 
-create table specialite (
-    id_specialite serial primary key,
-    type_specialite varchar(20)
-);
-
 create table salaire(
     id_salaire serial primary key,
     prix integer
 )
+
+
+create table specialite (
+    id_specialite serial primary key,
+    type_specialite varchar(20)
+    salaire integer check salaire > 0,
+    foreign key (id_salaire) references salaire(id_salaire)
+);
 
 create table candidat(
     id_candidat serial primary key,
@@ -47,12 +50,14 @@ insert into type_niveau(type_niveau) values
 ('Master 2'),
 ('Doctorat');
 
-insert into specialite(type_specialite) values
-('Soudure'),
-('Vidange'),
-('Mecanicien'),
-('Mpanadio'),
-('Electronique');
+insert into specialite(type_specialite, salaire) values
+('Soudure', 200000),
+('Vidange', 500000),
+('Mecanicien', 600000),
+('Mpanadio', 200000),
+('Electricien', 600000 );
+
+insert into salaire()
 
 insert into candidat(nom, prenom, date_naissance, id_niveau,id_specialite,id_sexe ) values
 ('rakoto', 'jaona', '2000-10-22', 1, 3, 2 ),
