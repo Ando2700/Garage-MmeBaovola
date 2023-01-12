@@ -18,14 +18,19 @@ create table specialite (
     type_specialite varchar(20)
 );
 
+create table salaire(
+    id_salaire serial primary key,
+    prix integer
+)
+
 create table candidat(
     id_candidat serial primary key,
     nom varchar(50),
     prenom varchar(50),
     date_naissance date,
-    id_specialite int,
-    id_sexe int,
-    id_niveau int, 
+    id_specialite integer,
+    id_sexe integer,
+    id_niveau integer, 
     foreign key (id_sexe) references sexe(id_sexe),
     foreign key (id_niveau) references type_niveau(id_niveau),
     foreign key (id_specialite) references specialite(id_specialite)
